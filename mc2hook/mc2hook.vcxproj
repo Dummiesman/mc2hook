@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>17.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{0fc19ac9-3216-485f-927d-9419a236c493}</ProjectGuid>
+    <RootNamespace>mc2hook</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(MSBuildProjectDirectory);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>$(MSBuildProjectDirectory);$(IncludePath)</IncludePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;MC2HOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>false</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;MC2HOOK_EXPORTS;_WINDOWS;_USRDLL;__BASE_FILE__="hook:%(Filename)%(Extension)";%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>false</ConformanceMode>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <BufferSecurityCheck>false</BufferSecurityCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+      <AdditionalDependencies>dbghelp.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalOptions>/pdbaltpath:%_PDB% %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;MC2HOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;MC2HOOK_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableUAC>false</EnableUAC>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="age\core\file.h" />
+    <ClInclude Include="age\core\output.h" />
+    <ClInclude Include="age\data\args.h" />
+    <ClInclude Include="age\data\asset.h" />
+    <ClInclude Include="age\data\parse.h" />
+    <ClInclude Include="age\data\refcount.h" />
+    <ClInclude Include="age\data\stack.h" />
+    <ClInclude Include="age\data\timemgr.h" />
+    <ClInclude Include="age\gfx\rstate.h" />
+    <ClInclude Include="age\input\input.h" />
+    <ClInclude Include="age\input\keyboard.h" />
+    <ClInclude Include="age\input\mouse.h" />
+    <ClInclude Include="age\memory\age_alloc_baseclass.h" />
+    <ClInclude Include="age\memory\memory.h" />
+    <ClInclude Include="age\string\string.h" />
+    <ClInclude Include="age\string\unicode.h" />
+    <ClInclude Include="age\text\fonttexture.h" />
+    <ClInclude Include="age\text\language.h" />
+    <ClInclude Include="age\text\stringdata.h" />
+    <ClInclude Include="age\text\stringtable.h" />
+    <ClInclude Include="age\text\hashtable.h" />
+    <ClInclude Include="age\memory\allocator.h" />
+    <ClInclude Include="age\ui\group.h" />
+    <ClInclude Include="age\ui\visual.h" />
+    <ClInclude Include="age\ui\widget.h" />
+    <ClInclude Include="age\vector\matrix34.h" />
+    <ClInclude Include="age\vector\matrix44.h" />
+    <ClInclude Include="age\vector\vector2.h" />
+    <ClInclude Include="age\vector\vector3.h" />
+    <ClInclude Include="age\vector\vector4.h" />
+    <ClInclude Include="age\zipfile\zipfile.h" />
+    <ClInclude Include="dllmain.h" />
+    <ClInclude Include="framework\hook.h" />
+    <ClInclude Include="framework\HookConfig.h" />
+    <ClInclude Include="framework\hook_framework.h" />
+    <ClInclude Include="framework\hook_output.h" />
+    <ClInclude Include="handlers\BorderlessHandler.h" />
+    <ClInclude Include="handlers\ChatHandler.h" />
+    <ClInclude Include="handlers\CustomExceptionHandler.h" />
+    <ClInclude Include="handlers\CustomVehicleHandler.h" />
+    <ClInclude Include="handlers\FontCrashFixHandler.h" />
+    <ClInclude Include="handlers\handlers.h" />
+    <ClInclude Include="handlers\HybridFileMethodsHandler.h" />
+    <ClInclude Include="handlers\InputHandler.h" />
+    <ClInclude Include="handlers\PathHandler.h" />
+    <ClInclude Include="handlers\PrinterHandler.h" />
+    <ClInclude Include="handlers\RemoveForcedArgsHandler.h" />
+    <ClInclude Include="handlers\StateResearchHook.h" />
+    <ClInclude Include="handlers\SteeringSmootherHandler.h" />
+    <ClInclude Include="handlers\TestPanelHandler.h" />
+    <ClInclude Include="handlers\vehTransmisisonHandler.h" />
+    <ClInclude Include="handlers\zipEnumHandler.h" />
+    <ClInclude Include="handlers\zipIintHandler.h" />
+    <ClInclude Include="handlers\InitHandler.h" />
+    <ClInclude Include="mc2hook\mc2hook.h" />
+    <ClInclude Include="mc2hook\mc2hook_defs.h" />
+    <ClInclude Include="mc2hook\mc2hook_util.h" />
+    <ClInclude Include="mcgame\ui\asyncio.h" />
+    <ClInclude Include="mcgame\ui\carstats.h" />
+    <ClInclude Include="handlers\OpenSpyHandler.h" />
+    <ClInclude Include="mcgame\ui\group.h" />
+    <ClInclude Include="mcgame\ui\iconbase.h" />
+    <ClInclude Include="mcgame\ui\mainmenu.h" />
+    <ClInclude Include="mcgame\ui\pausemenu.h" />
+    <ClInclude Include="mcgame\ui\vehicle3d.h" />
+    <ClInclude Include="thirdparty\inicpp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="age\core\output.cpp" />
+    <ClCompile Include="age\data\asset.cpp" />
+    <ClCompile Include="age\data\stack.cpp" />
+    <ClCompile Include="age\data\timemgr.cpp" />
+    <ClCompile Include="age\gfx\rstate.cpp" />
+    <ClCompile Include="age\input\input.cpp" />
+    <ClCompile Include="age\input\keyboard.cpp" />
+    <ClCompile Include="age\input\mouse.cpp" />
+    <ClCompile Include="age\memory\age_alloc_baseclass.cpp" />
+    <ClCompile Include="age\memory\allocator.cpp" />
+    <ClCompile Include="age\vector\matrix34.cpp" />
+    <ClCompile Include="age\vector\matrix44.cpp" />
+    <ClCompile Include="age\vector\vector.h" />
+    <ClCompile Include="age\vector\vector3.cpp" />
+    <ClCompile Include="age\vector\vector4.cpp" />
+    <ClCompile Include="age\zipfile\zipfile.cpp" />
+    <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="framework\hook.cpp" />
+    <ClCompile Include="framework\HookConfig.cpp" />
+    <ClCompile Include="framework\hook_output.cpp" />
+    <ClCompile Include="handlers\BorderlessHandler.cpp" />
+    <ClCompile Include="handlers\ChatHandler.cpp" />
+    <ClCompile Include="handlers\CustomExceptionHandler.cpp" />
+    <ClCompile Include="handlers\CustomVehicleHandler.cpp" />
+    <ClCompile Include="handlers\FontCrashFixHandler.cpp" />
+    <ClCompile Include="handlers\HybridFileMethodsHandler.cpp" />
+    <ClCompile Include="handlers\InputHandler.cpp" />
+    <ClCompile Include="handlers\PathHandler.cpp" />
+    <ClCompile Include="handlers\PrinterHandler.cpp" />
+    <ClCompile Include="handlers\RemoveForcedArgsHandler.cpp" />
+    <ClCompile Include="handlers\StateResearchHook.cpp" />
+    <ClCompile Include="handlers\SteeringSmootherHandler.cpp" />
+    <ClCompile Include="handlers\TestPanelHandler.cpp" />
+    <ClCompile Include="handlers\vehTransmisisonHandler.cpp" />
+    <ClCompile Include="handlers\zipEnumHandler.cpp" />
+    <ClCompile Include="handlers\zipInitHandler.cpp" />
+    <ClCompile Include="handlers\InitHandler.cpp" />
+    <ClCompile Include="mcgame\ui\asyncio.cpp" />
+    <ClCompile Include="handlers\OpenSpyHandler.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
