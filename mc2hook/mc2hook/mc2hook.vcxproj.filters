@@ -213,6 +213,9 @@
     <ClInclude Include="age\gfx\rstate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="age\ui\flowctrl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">

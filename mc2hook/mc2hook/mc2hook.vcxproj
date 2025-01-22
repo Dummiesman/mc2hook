@@ -172,6 +172,7 @@
     <ClInclude Include="age\text\stringtable.h" />
     <ClInclude Include="age\text\hashtable.h" />
     <ClInclude Include="age\memory\allocator.h" />
+    <ClInclude Include="age\ui\flowctrl.h" />
     <ClInclude Include="age\ui\group.h" />
     <ClInclude Include="age\ui\visual.h" />
     <ClInclude Include="age\ui\widget.h" />
