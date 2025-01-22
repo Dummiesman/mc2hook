@@ -216,6 +216,9 @@
     <ClInclude Include="age\ui\flowctrl.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="handlers\ReflectionFidelityHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -333,6 +336,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="age\gfx\rstate.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="handlers\ReflectionFidelityHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
