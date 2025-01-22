@@ -1,15 +1,28 @@
 #include "rstate.h"
 
-declfield(gfxRenderState::sm_Camera) = 0x858548;
+declfield(gfxState::sm_Camera) = 0x858548;
 
-inline void gfxRenderState::SetCamera(Matrix44 const& mtx) {
+void gfxState::SetCamera(Matrix44 const& mtx) 
+{
     hook::StaticThunk<0x5EE8D0>::Call<void>(&mtx); 
 }
 
-inline void gfxRenderState::SetCamera(Matrix34 const& mtx) {
+void gfxState::SetCamera(Matrix34 const& mtx) 
+{
     hook::StaticThunk<0x5EE900>::Call<void>(&mtx); 
 }
 
-inline Matrix44 gfxRenderState::GetCameraMatrix() {
-    return gfxRenderState::sm_Camera;
+Matrix44 gfxState::GetCameraMatrix() 
+{
+    return gfxState::sm_Camera;
+}
+
+void gfxState::SetCull(gfxCullMode mode)
+{
+    hook::StaticThunk<0x5EE1A0>::Call<void>(static_cast<int>(mode));
+}
+
+void gfxState::SetZWriteEnable(bool enable)
+{
+    hook::StaticThunk<0x5EE4A0>::Call<void>(enable);
 }
