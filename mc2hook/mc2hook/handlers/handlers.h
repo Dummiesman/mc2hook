@@ -17,6 +17,7 @@
 #include <handlers\InputHandler.h>
 #include <handlers\BorderlessHandler.h>
 #include <handlers\ReflectionFidelityHandler.h>
+#include <handlers/ControllerScrollingFixHandler.h>
 
 #include <handlers\StateResearchHook.h>
 
