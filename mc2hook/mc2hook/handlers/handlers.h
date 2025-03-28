@@ -50,6 +50,7 @@ static void InstallMainHandlers()
     InstallHandler<ChatHandler>("Chat Handler");
     InstallHandler<InitHandler>("Game Init Handler");
     InstallHandler<ReflectionFidelityHandler>("Reflection Fidelity Handller");
+    InstallHandler<ControllerScrollingFixHandler>("Controller Scrolling Fix");
 
     InstallHandler<StateResearchHook>("SRH");
 }
