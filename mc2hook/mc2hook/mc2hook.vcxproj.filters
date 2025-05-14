@@ -219,6 +219,9 @@
     <ClInclude Include="handlers\ReflectionFidelityHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="handlers\ControllerScrollingFixHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -339,6 +342,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="handlers\ReflectionFidelityHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="handlers\ControllerScrollingFixHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

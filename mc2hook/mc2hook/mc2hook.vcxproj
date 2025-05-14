@@ -189,6 +189,7 @@
     <ClInclude Include="framework\hook_output.h" />
     <ClInclude Include="handlers\BorderlessHandler.h" />
     <ClInclude Include="handlers\ChatHandler.h" />
+    <ClInclude Include="handlers\ControllerScrollingFixHandler.h" />
     <ClInclude Include="handlers\CustomExceptionHandler.h" />
     <ClInclude Include="handlers\CustomVehicleHandler.h" />
     <ClInclude Include="handlers\FontCrashFixHandler.h" />
@@ -242,6 +243,7 @@
     <ClCompile Include="framework\hook_output.cpp" />
     <ClCompile Include="handlers\BorderlessHandler.cpp" />
     <ClCompile Include="handlers\ChatHandler.cpp" />
+    <ClCompile Include="handlers\ControllerScrollingFixHandler.cpp" />
     <ClCompile Include="handlers\CustomExceptionHandler.cpp" />
     <ClCompile Include="handlers\CustomVehicleHandler.cpp" />
     <ClCompile Include="handlers\FontCrashFixHandler.cpp" />
