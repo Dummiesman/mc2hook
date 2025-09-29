@@ -158,6 +158,8 @@
     <ClInclude Include="age\data\refcount.h" />
     <ClInclude Include="age\data\stack.h" />
     <ClInclude Include="age\data\timemgr.h" />
+    <ClInclude Include="age\gfx\font.h" />
+    <ClInclude Include="age\gfx\pipeline.h" />
     <ClInclude Include="age\gfx\rstate.h" />
     <ClInclude Include="age\input\input.h" />
     <ClInclude Include="age\input\keyboard.h" />
@@ -192,6 +194,7 @@
     <ClInclude Include="handlers\CustomExceptionHandler.h" />
     <ClInclude Include="handlers\CustomVehicleHandler.h" />
     <ClInclude Include="handlers\FontCrashFixHandler.h" />
+    <ClInclude Include="handlers\FPSCounterHandler.h" />
     <ClInclude Include="handlers\handlers.h" />
     <ClInclude Include="handlers\HybridFileMethodsHandler.h" />
     <ClInclude Include="handlers\InputHandler.h" />
@@ -224,6 +227,8 @@
     <ClCompile Include="age\data\asset.cpp" />
     <ClCompile Include="age\data\stack.cpp" />
     <ClCompile Include="age\data\timemgr.cpp" />
+    <ClCompile Include="age\gfx\font.cpp" />
+    <ClCompile Include="age\gfx\pipeline.cpp" />
     <ClCompile Include="age\gfx\rstate.cpp" />
     <ClCompile Include="age\input\input.cpp" />
     <ClCompile Include="age\input\keyboard.cpp" />
@@ -245,6 +250,7 @@
     <ClCompile Include="handlers\CustomExceptionHandler.cpp" />
     <ClCompile Include="handlers\CustomVehicleHandler.cpp" />
     <ClCompile Include="handlers\FontCrashFixHandler.cpp" />
+    <ClCompile Include="handlers\FPSCounterHandler.cpp" />
     <ClCompile Include="handlers\HybridFileMethodsHandler.cpp" />
     <ClCompile Include="handlers\InputHandler.cpp" />
     <ClCompile Include="handlers\PathHandler.cpp" />

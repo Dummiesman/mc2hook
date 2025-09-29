@@ -219,6 +219,15 @@
     <ClInclude Include="handlers\ReflectionFidelityHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="age\gfx\font.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="age\gfx\pipeline.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="handlers\FPSCounterHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp">
@@ -339,6 +348,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="handlers\ReflectionFidelityHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="age\gfx\font.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="age\gfx\pipeline.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="handlers\FPSCounterHandler.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
