@@ -13,11 +13,11 @@ bool ioKeyboard::GetKey(uint8_t keycode)
 bool ioKeyboard::GetKeyDown(uint8_t keycode)
 {
     return (m_Keys.ptr()[KEYINDEX(0, keycode)] ^ m_Keys.ptr()[KEYINDEX(1, keycode)])
-        & m_Keys.ptr()[KEYINDEX(1 - m_Active.get(), keycode)];
+        & m_Keys.ptr()[KEYINDEX(GetActiveFlag(), keycode)];
 }
 
 bool ioKeyboard::GetKeyUp(uint8_t keycode)
 {
     return (m_Keys.ptr()[KEYINDEX(0, keycode)] ^ m_Keys.ptr()[KEYINDEX(1, keycode)])
-            & m_Keys.ptr()[KEYINDEX(1 - m_Active.get(), keycode)];
+        & m_Keys.ptr()[KEYINDEX(!GetActiveFlag(), keycode)];
 }
