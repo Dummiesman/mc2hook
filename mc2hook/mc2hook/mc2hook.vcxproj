@@ -195,6 +195,7 @@
     <ClInclude Include="handlers\handlers.h" />
     <ClInclude Include="handlers\HybridFileMethodsHandler.h" />
     <ClInclude Include="handlers\InputHandler.h" />
+    <ClInclude Include="handlers\LevelExtentsHandler.h" />
     <ClInclude Include="handlers\PathHandler.h" />
     <ClInclude Include="handlers\PrinterHandler.h" />
     <ClInclude Include="handlers\ReflectionFidelityHandler.h" />
@@ -247,6 +248,7 @@
     <ClCompile Include="handlers\FontCrashFixHandler.cpp" />
     <ClCompile Include="handlers\HybridFileMethodsHandler.cpp" />
     <ClCompile Include="handlers\InputHandler.cpp" />
+    <ClCompile Include="handlers\LevelExtentsHandler.cpp" />
     <ClCompile Include="handlers\PathHandler.cpp" />
     <ClCompile Include="handlers\PrinterHandler.cpp" />
     <ClCompile Include="handlers\ReflectionFidelityHandler.cpp" />
