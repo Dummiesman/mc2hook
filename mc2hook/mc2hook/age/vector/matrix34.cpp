@@ -43,17 +43,17 @@ void Matrix34::MakeRotateUnitAxis(Vector3 const& axis, float angle)
     float sine = sin(angle);
     float versine = 1.0f - cosine;
 
-    SetRow(0, Vector3(axis.X * axis.X * versine + cosine, 
-                      axis.Y * axis.X * versine + sine * axis.Z, 
-                      axis.Z * axis.X * versine - sine * axis.Y));
+    SetRow(0, Vector3(axis.X * axis.X * versine + cosine,
+        axis.Y * axis.X * versine + sine * axis.Z,
+        axis.Z * axis.X * versine - sine * axis.Y));
 
     SetRow(1, Vector3(axis.Y * axis.X * versine - sine * axis.Z,
-                      axis.Y * axis.Y * versine + cosine,
-                      axis.Z * axis.Z * versine + cosine));
-    
+        axis.Y * axis.Y * versine + cosine,
+        axis.Z * axis.Y * versine + sine * axis.X));
+
     SetRow(2, Vector3(axis.Z * axis.X * versine + sine * axis.Y,
-                      axis.Z * axis.Y * versine + sine * axis.X,
-                      axis.Z * axis.Y * versine - sine * axis.X));
+        axis.Z * axis.Y * versine - sine * axis.X,
+        axis.Z * axis.Z * versine + cosine));
 }
 
 void Matrix34::MakeScale(float xScale, float yScale, float zScale) {
