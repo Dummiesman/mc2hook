@@ -159,6 +159,7 @@
     <ClInclude Include="age\data\stack.h" />
     <ClInclude Include="age\data\timemgr.h" />
     <ClInclude Include="age\gfx\rstate.h" />
+    <ClInclude Include="age\gfx\viewport.h" />
     <ClInclude Include="age\input\input.h" />
     <ClInclude Include="age\input\keyboard.h" />
     <ClInclude Include="age\input\mouse.h" />
@@ -192,6 +193,7 @@
     <ClInclude Include="handlers\CustomExceptionHandler.h" />
     <ClInclude Include="handlers\CustomVehicleHandler.h" />
     <ClInclude Include="handlers\FontCrashFixHandler.h" />
+    <ClInclude Include="handlers\FreeCamHandler.h" />
     <ClInclude Include="handlers\handlers.h" />
     <ClInclude Include="handlers\HybridFileMethodsHandler.h" />
     <ClInclude Include="handlers\InputHandler.h" />
@@ -225,6 +227,7 @@
     <ClCompile Include="age\data\stack.cpp" />
     <ClCompile Include="age\data\timemgr.cpp" />
     <ClCompile Include="age\gfx\rstate.cpp" />
+    <ClCompile Include="age\gfx\viewport.cpp" />
     <ClCompile Include="age\input\input.cpp" />
     <ClCompile Include="age\input\keyboard.cpp" />
     <ClCompile Include="age\input\mouse.cpp" />
@@ -245,6 +248,7 @@
     <ClCompile Include="handlers\CustomExceptionHandler.cpp" />
     <ClCompile Include="handlers\CustomVehicleHandler.cpp" />
     <ClCompile Include="handlers\FontCrashFixHandler.cpp" />
+    <ClCompile Include="handlers\FreeCamHandler.cpp" />
     <ClCompile Include="handlers\HybridFileMethodsHandler.cpp" />
     <ClCompile Include="handlers\InputHandler.cpp" />
     <ClCompile Include="handlers\PathHandler.cpp" />

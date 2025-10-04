@@ -17,6 +17,14 @@ Matrix44 gfxState::GetCameraMatrix()
     return gfxState::sm_Camera;
 }
 
+void gfxState::SetWorld(Matrix44 const& mtx) {
+    hook::StaticThunk<0x5EDB00>::Call<void>(&mtx);
+}
+
+void gfxState::SetWorld(Matrix34 const& mtx) {
+    hook::StaticThunk<0x5EDB20>::Call<void>(&mtx);
+}
+
 void gfxState::SetCull(gfxCullMode mode)
 {
     hook::StaticThunk<0x5EE1A0>::Call<void>(static_cast<int>(mode));
