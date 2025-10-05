@@ -17,6 +17,7 @@
 #include <handlers\InputHandler.h>
 #include <handlers\BorderlessHandler.h>
 #include <handlers\ReflectionFidelityHandler.h>
+#include <handlers/DeadZoneHandler.h>
 
 #include <handlers\StateResearchHook.h>
 
@@ -50,6 +51,7 @@ static void InstallMainHandlers()
     InstallHandler<ChatHandler>("Chat Handler");
     InstallHandler<InitHandler>("Game Init Handler");
     InstallHandler<ReflectionFidelityHandler>("Reflection Fidelity Handller");
+    InstallHandler<DeadZoneHandler>("Dead Zone Handler");
 
     InstallHandler<StateResearchHook>("SRH");
 }

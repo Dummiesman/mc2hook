@@ -9,6 +9,8 @@ static float steerValue = 0.0f;
 static float steerSpeed = 4.0f;
 static float steerSpeedOut = 6.0f;
 
+float controllerSteerSpeed;
+
 void SteeringSmootherHandler::Update()
 {
     hook::Thunk<0x46B330>::Call<void>(this); // call original
@@ -43,4 +45,8 @@ void SteeringSmootherHandler::Install()
     if (datArgParser::Get("smoothsteer")) {
         InstallVTableHook("Input Update", &Update, { 0x63D0C4 });
     }
+
+    // Exposing controller speed value
+    controllerSteerSpeed = HookConfig::GetFloat("Input", "ControllerSteerSpeed", 10.0f);
+    mem::write(0x46B28E + 3, static_cast<float>(controllerSteerSpeed));
 }

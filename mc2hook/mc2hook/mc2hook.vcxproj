@@ -191,6 +191,7 @@
     <ClInclude Include="handlers\ChatHandler.h" />
     <ClInclude Include="handlers\CustomExceptionHandler.h" />
     <ClInclude Include="handlers\CustomVehicleHandler.h" />
+    <ClInclude Include="handlers\DeadZoneHandler.h" />
     <ClInclude Include="handlers\FontCrashFixHandler.h" />
     <ClInclude Include="handlers\handlers.h" />
     <ClInclude Include="handlers\HybridFileMethodsHandler.h" />
@@ -244,6 +245,7 @@
     <ClCompile Include="handlers\ChatHandler.cpp" />
     <ClCompile Include="handlers\CustomExceptionHandler.cpp" />
     <ClCompile Include="handlers\CustomVehicleHandler.cpp" />
+    <ClCompile Include="handlers\DeadZoneHandler.cpp" />
     <ClCompile Include="handlers\FontCrashFixHandler.cpp" />
     <ClCompile Include="handlers\HybridFileMethodsHandler.cpp" />
     <ClCompile Include="handlers\InputHandler.cpp" />
