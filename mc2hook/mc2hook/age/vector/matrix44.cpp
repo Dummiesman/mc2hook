@@ -126,3 +126,18 @@ void Matrix44::FromMatrix34(Matrix34 const& m34)
     SetRow(0, Vector4(m34c.X, m34c.Y, m34c.Z, 0.0f));
     SetRow(0, Vector4(m34d.X, m34d.Y, m34d.Z, 1.0f));
 }
+
+Matrix34 Matrix44::ToMatrix34()
+{
+    Vector4 m34a = GetRow(0);
+    Vector4 m34b = GetRow(1);
+    Vector4 m34c = GetRow(2);
+    Vector4 m34d = GetRow(3);
+
+    Matrix34 returnMat;
+    returnMat.SetRow(0, Vector3(m34a.X, m34a.Y, m34a.Z));
+    returnMat.SetRow(1, Vector3(m34b.X, m34b.Y, m34b.Z));
+    returnMat.SetRow(2, Vector3(m34c.X, m34c.Y, m34c.Z));
+    returnMat.SetRow(3, Vector3(m34d.X, m34d.Y, m34d.Z));
+    return returnMat;
+}
