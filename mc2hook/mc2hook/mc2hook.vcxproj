@@ -202,6 +202,7 @@
     <ClInclude Include="handlers\StateResearchHook.h" />
     <ClInclude Include="handlers\SteeringSmootherHandler.h" />
     <ClInclude Include="handlers\TestPanelHandler.h" />
+    <ClInclude Include="handlers\TimeWarpHandler.h" />
     <ClInclude Include="handlers\vehTransmisisonHandler.h" />
     <ClInclude Include="handlers\zipEnumHandler.h" />
     <ClInclude Include="handlers\zipIintHandler.h" />
@@ -254,6 +255,7 @@
     <ClCompile Include="handlers\StateResearchHook.cpp" />
     <ClCompile Include="handlers\SteeringSmootherHandler.cpp" />
     <ClCompile Include="handlers\TestPanelHandler.cpp" />
+    <ClCompile Include="handlers\TimeWarpHandler.cpp" />
     <ClCompile Include="handlers\vehTransmisisonHandler.cpp" />
     <ClCompile Include="handlers\zipEnumHandler.cpp" />
     <ClCompile Include="handlers\zipInitHandler.cpp" />
