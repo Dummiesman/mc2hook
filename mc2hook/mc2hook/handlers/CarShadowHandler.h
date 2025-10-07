@@ -4,6 +4,5 @@
 class CarShadowHandler
 {
 public:
-    static void SetColor_Hook(float a1);
     static void Install();
 };
