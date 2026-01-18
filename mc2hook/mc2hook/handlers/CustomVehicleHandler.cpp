@@ -112,13 +112,13 @@ static void EnumCustomVehicles(LPCSTR name, bool isDir, void* userdata)
     
     if (dotPos)
     {
-        if (!strcmpi(dotPos, ".vehmodel"))
+        if (!_strcmpi(dotPos, ".vehmodel"))
         {
             *dotPos = 0x00;
             bool is_default = false;
             for (int i = 0; i < ORIG_VEHICLE_COUNT; i++)
             {
-                if (!strcmpi(ORIG_VEHICLE_BASENAMES[i], vehBaseName))
+                if (!_strcmpi(ORIG_VEHICLE_BASENAMES[i], vehBaseName))
                 {
                     is_default = true;
                     break;
@@ -127,7 +127,7 @@ static void EnumCustomVehicles(LPCSTR name, bool isDir, void* userdata)
 
             if (!is_default)
             {
-                VEHICLE_BASENAMES_DYN[NUM_DYN_VEHICLES++] = strdup(vehBaseName);
+                VEHICLE_BASENAMES_DYN[NUM_DYN_VEHICLES++] = _strdup(vehBaseName);
                 NumCustomVehicles++;
             }
         }
@@ -304,7 +304,7 @@ void CustomVehicleHandler::Install()
    // Network related
    InstallCallback("CustomVehicleHandler (14)", "Custom vehicle test: Hook vehicle var get",
    &netmanager_GetVarHook, {
-       cb::call(0x4087D9), 
+       cb::call(0x4087D9), // join request packet 
        cb::call(0x436719),
        cb::call(0x437005),
        cb::call(0x43EEEA)
@@ -351,6 +351,10 @@ void CustomVehicleHandler::Install()
 
    // Vehicle selection streams
    mem::write(0x4576CE + 3, &VEHICLE_BASENAMES_DYN);
+
+   // Menu selection audio
+   mem::write(0x45830C + 1, &VEHICLE_BASENAMES_DYN);
+   mem::write(0x45833C + 2, VEHICLE_BASENAMES_DYN + NUM_DYN_VEHICLES);
 
    // Lookup car
    mem::write(0x53D010 + 3, &VEHICLE_BASENAMES_DYN);
